@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head><p style="color:white;font-size:50px;"><b>MUSIFY</b></p> 
+<body background="pic2.jpg" >
+
+</body>
+
+<p style="color:white;font-size:30px;">Where music heals you.. <3</p> 
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="project1.html">Home</a></li>
+  <li><a href="#news">Playlist</a></li>
+   <li><a href="about.html">About</a></li>
+</ul><br><br>
+<!--SLIDESHOW-->
+<section>
+    <style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+  <img class="mySlides" src="pic1.jpg" style="width:50%">
+  <img class="mySlides" src="pic2.jpg" style="width:50%">
+  <img class="mySlides" src="pic3.jpg" style="width:50%">
+</section>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+<!--PICTURES-->
+<style>
+* {
+  box-sizing: border-box;
+}
+.box{
+        position: relative;
+        display: inline-block; /* Make the width of box same as image */
+    }
+    .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 90;
+        top: 80%; /* Adjust this value to move the positioned div up and down */
+        text-align: left;
+        width: 60%; /* Set the width of the positioned div */
+    }
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+<body>
+<br><br>
+<h2 style="color:white;font-size:30px;" align="center">Choose what pleases your ear...</h2>
+
+
+<div class="row">
+  <div class="column">
+    <div class="box">
+      <a href="bollywood.html">
+        <img src="pic1.jpg" alt="Headphones" style="width:100%"></a>
+        <div class="text">
+            <h1>Bollywood</h1>
+        </div>
+    </div>
+   
+  </div>
+  <div class="column">
+  	<a href="romantic.html">
+    <img src="pic2.jpg" alt="Forest" style="width:100%"></a>
+  </div>
+  <div class="column">
+  		<a href="pop.html">
+    <img src="pic3.jpg" alt="Mountains" style="width:100%"></a>
+  </div>
+</div>
+
+<footer>
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+    NIDHI HERE<a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Footer</a>
+  </p>
+</footer>
+
+
+</body>
+</html>
+

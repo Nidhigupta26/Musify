@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head><p style="color:white;font-size:50px;"><b>Romantic</b></p> 
+<body background="pic2.jpg" >
+
+</body>
+<p style="color:white;font-size:30px;">How about something romantic..?</p> 
+<link rel="stylesheet" type="text/css" href="css\demo1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+.topnav {
+  overflow: hidden;
+  background-color: none;
+}
+.topnav .search-container {
+  float:left;
+  margin-left: 500px;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+   font-size: 20px;
+  border: none;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+</style>
+
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="D:\Web dev\Project\project1.html">Home</a></li>
+  <li><a href="#news">Playlist</a></li>
+   <li><a href="about.html">About</a></li>
+</ul>
+<br><br>
+<h2 style="color:white;font-size:30px;" align="center">Let's pick something you like..</h2>
+<body>
+<div class="topnav">
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+</body><br><br>
+<style>
+    #playlist {
+      list-style: none;
+    }
+    #playlist li a{
+      color:black;
+      text-decoration: none;
+    }
+    #playlist .current-song a{
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  <audio src="" controls id="audioPlayer">
+  </audio>
+  <div class="row">
+<style>
+.row{clear:both}
+
+.column{
+    width: 25%;
+    float: left;
+}</style>
+
+</head>
+<body>
+
+  <div class="column">
+  <ul id="playlist">
+    <li class="current-song"><a href="Make it.mp3">Make it (NEFFEX)</a></li>
+    <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+    <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  </ul></div>
+  <div class="column">
+  <ul id="playlist">
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+
+  </ul></div>
+<div class="column">
+  <ul id="playlist">
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+
+  </ul></div>
+  <div class="column">
+  <ul id="playlist">
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+  <li><a href="Perfect.mp3">Perfect (Ed Sheeran)</a></li>
+
+  </ul></div></div>
+  <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script>
+    audioPlayer();
+    function audioPlayer() {
+      var currentSong = 0;
+            $("#audioPlayer")[0].src = $("#playlist li a")[0];
+            $("#audioPlayer")[0].play();
+            $("#playlist li a").click(function(e){
+               e.preventDefault(); 
+               $("#audioPlayer")[0].src = this;
+               $("#audioPlayer")[0].play();
+               $("#playlist li").removeClass("current-song");
+                currentSong = $(this).parent().index();
+                $(this).parent().addClass("current-song");
+      });
+    }
+  </script>
+</body>
+</html>
