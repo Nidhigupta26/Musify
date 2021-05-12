@@ -1,2 +1,2 @@
 # Musify
-built using Html, Css, Bootstrap, Js
+Built using Html, Css, Bootstrap, Js
